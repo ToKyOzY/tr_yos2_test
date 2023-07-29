@@ -50,12 +50,12 @@ public class SmokeStepDef extends TestPage{
 
     @Then("Gecerli email girer")
     public void gecerliEmailGirer() {
-        userName.sendKeys("zynpsarkaya@gmail.com");
+        userName.sendKeys(ConfigReader.getProperty("userName"));
     }
 
     @And("Gecerli password girer")
     public void gecerliPasswordGirer() {
-       password.sendKeys("12345678", Keys.ENTER);
+       password.sendKeys(ConfigReader.getProperty("password"), Keys.ENTER);
     }
 
     @And("Login butonuna tiklar")

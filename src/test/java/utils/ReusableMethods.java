@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.TestPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import static org.junit.Assert.assertTrue;
 public class ReusableMethods {
     static Faker faker;
     static Actions actions;
+
 
     //====== Actions ======//
     public static Actions getActions() { //getActions method
@@ -152,4 +154,22 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].setAttribute('" + key + "','" + text + "')", element);
     }
+    //========Scroll Into View=====//
+    public static void scrollIntoView(WebElement element) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    //========ScrollBy=====//
+    public static void scrollBy(long scrollY) {
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("window.scrollBy(0," + scrollY + ")", "");
+    }
+    //====== JS Scroll ====//
+    public static void jsScroll(WebElement webElement) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+    }
+
+
 }
