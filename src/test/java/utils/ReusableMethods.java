@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.TestPage;
 
@@ -20,10 +21,17 @@ public class ReusableMethods {
     static Faker faker;
     static Actions actions;
 
+    static Select select;
+
 
     //====== Actions ======//
     public static Actions getActions() { //getActions method
         return actions = new Actions(Driver.getDriver());
+    }
+
+    //====== Select ======//
+    public static Select select(WebElement ddm) {
+        return select = new Select(ddm);
     }
 
     public static WebElement waitForVisibility(WebElement element, int timeout) {

@@ -45,7 +45,7 @@ public class TestPage  {
     @FindBy (xpath = "//*[text()='Search']")
     public WebElement search;
 
-    @FindBy (xpath = "(//*[@class=' css-19bb58m'])[1]")
+    @FindBy (xpath = "(//*[@class=' css-13cymwt-control'])[1]")
     public WebElement selectCity;
 
     @FindBy (xpath = "(//*[@class=' css-19bb58m'])[2]")

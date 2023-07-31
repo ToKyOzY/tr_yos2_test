@@ -20,7 +20,6 @@ public class Us_003stepDef extends TestPage {
         testPage.userName.sendKeys(ConfigReader.getProperty("userName"));
         ReusableMethods.waitFor(3);
         testPage.password.sendKeys(ConfigReader.getProperty("password"),Keys.ENTER);
-        ReusableMethods.waitFor(3);
         Driver.getDriver().navigate().refresh();
 
     }
@@ -49,12 +48,13 @@ public class Us_003stepDef extends TestPage {
     }
 
     @And("Sehir aratir")
-    public void sehirAratir() throws IOException {
-        selectCity.click();
-        selectCity.sendKeys("Ankara",Keys.ENTER);
-
-        ReusableMethods.getScreenshotWebElement("sehir",selectCity);
+    public void sehirAratir() throws   IOException {
+       ReusableMethods.select(selectCity).selectByVisibleText("Ankara");
+        ReusableMethods.getActions().sendKeys(Keys.TAB).build().perform();
+        //selectCity.sendKeys("ankara");
         ReusableMethods.waitFor(3);
+       // ReusableMethods.getScreenshotWebElement("sehir",selectCity);
+        //ReusableMethods.waitFor(3);
     }
 
     @And("Sehire gore uni aratir")
