@@ -21,3 +21,16 @@ In this project, IntelliJ is used as IDE, Used Maven repo to configure the proje
 <hr>
 <img src="https://github.com/ToKyOzY/tr_yos2_test/blob/master/Screenshot_1.png" alt="">
 <hr>
+
+* Data Driven feature has been added to our Behavior Driven Development Framework by using Scenario Outline in feature files. 
+Because we can develop this Test Case by sending as much Data as we want to Scenario Outline and we will gain a Data-oriented feature.
+
+* `Data Driven Framework` is a method of separating datasets from test case. Once the datasets leave the test case, they can be easily modified for specific functionality without changing the code. It is used to fetch test cases and packages from external files such as Excel, .csv, .xml or some database tables.
+
+* `Hybrid Framework` is a concept where we take advantage of both Keyword driven framework and Data Driven Framework. It is an easy-to-use framework that allows manual testers to create test cases just by looking at keywords, test data, and object storage without coding in the framework.
+
+# Runner File
+* Thanks to the notations used in the 'Runner' class, both the reports of the feature files that we can run here and the creation of the desired methods can be provided.
+* Runs from runner by adding tags to scenarios.
+
+# Pretty Report 
