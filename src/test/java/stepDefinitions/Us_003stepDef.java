@@ -50,7 +50,7 @@ public class Us_003stepDef extends TestPage {
     @And("Sehir aratir")
     public void sehirAratir() throws   IOException {
        ReusableMethods.select(selectCity).selectByVisibleText("Ankara");
-        ReusableMethods.getActions().sendKeys(Keys.TAB).build().perform();
+        //ReusableMethods.getActions().sendKeys(Keys.TAB).build().perform();
         //selectCity.sendKeys("ankara");
         ReusableMethods.waitFor(3);
        // ReusableMethods.getScreenshotWebElement("sehir",selectCity);
