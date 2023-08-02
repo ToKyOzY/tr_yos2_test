@@ -15,7 +15,6 @@ In this project, IntelliJ is used as IDE, Used Maven repo to configure the proje
 <img src=" https://github.com/ToKyOzY/tr_yos2_test/blob/master/Screenshot_2.png" alt="">
 <hr>
  
-
 # Description of Project Structure
 * The POM structure you see below was used;
 
