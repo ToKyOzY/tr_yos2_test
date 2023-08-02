@@ -9,6 +9,14 @@
 
 
 In this project, IntelliJ is used as IDE, Used Maven repo to configure the project, the coding language in which the project is written is Java, the `Cucumber BDD` Framework was used, and the `POM` (Page Object Model) design model was used in accordance with the `OOP` (Object Oriented Programming) concept in the Cucumber Framework.
+
+* Created test cases, and test scenarios according to acceptance criteria.
+* Used `excel` for test cases, test scenarios, and following test steps.
+* This link is Excel sheets https://docs.google.com/spreadsheets/d/1TQgBvSY5eYa79novi0Cy7IItOibDo5_wHw5BAELUunA/edit?usp=sharing
+ <hr>
+<img src="https://github.com/ToKyOzY/tr_yos2_test/blob/master/Screenshot_3.png" alt="">
+<hr>
+  
 * Used `maven` as project configuration tool.
 * In the UI, `Selenium Webdriver` was used.
 <hr>
