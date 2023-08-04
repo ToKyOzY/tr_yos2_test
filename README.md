@@ -42,3 +42,7 @@ Because we can develop this Test Case by sending as much Data as we want to Scen
 * Runs from runner by adding tags to scenarios.
 
 # Pretty Report 
+
+<hr>
+<img src="https://github.com/ToKyOzY/tr_yos2_test/blob/master/Screenshot_4.png" alt="">
+<hr>
