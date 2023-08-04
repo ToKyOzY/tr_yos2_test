@@ -5,7 +5,6 @@
 
       Given Kullanici "tr_yos" sayfasina gider
       When Kullanici sign in olur
-   Then  HomePage sayfasına gider
     And Sayfa altında Address, navigation ve my account kısımlarının göründüğünü doğrular
     And Her sayfada olduğunu doğrular
     And Sayfayi kapatir
@@ -15,7 +14,6 @@
 
       Given Kullanici "tr_yos" sayfasina gider
    When  Kullanici sign in olur
-    Then HomePage sayfasına gider
     And  Address kısmında Email ve telefon numarası butonlarının göründüğünü ve tıklanabilir olduğunu doğrular
     And Sayfayi kapatir
 
@@ -24,7 +22,6 @@
 
       Given Kullanici "tr_yos" sayfasina gider
     When Kullanici sign in olur
-    Then HomePage sayfasına gider
     And Sayfa altında Navigation kısında About Us,FAQs Page,Checkout,Contact,Blog butonları görünmeli
     And Navigation altında About Us,FAQs Page,Checkout,Contact,Blog butonları tıklanabilir olmalı, tek tek tıklanmalı
     And Navigation altında About Us,FAQs Page,Checkout,Contact,Blog butonları ilgili sayfaya bağlandığı doğrulanmalı
@@ -35,7 +32,6 @@
 
       Given Kullanici "tr_yos" sayfasina gider
     When Kullanici sign in olur
-    Then HomePage sayfasına gider
     And Sayfa altında My Account altında My Profile,My Account,Favorites butonları görünmeli
     And My Account altında My Profile,My Account,Favorites butonları tıklanabilir olmalı
     And My Account altında My Profile,My Account,Favorites butonları ilgili sayfaya yönlendirmeli

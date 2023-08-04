@@ -10,16 +10,13 @@ Feature: US_003
       And  HomePage'de oldugunu dogrular
       And  Default halinde uni siralndigini gorur
       And  Sayfayi kapatir
-
+@cc
   Scenario: TC_002 Şehir seçilebilmeli, şehire göre üniversite ve bölüm aratılabilmeli.
 
     Given Kullanici "tr_yos" sayfasina gider
       When Kullanici sign in olur
       Then Search butonunun oldugunu dogrular
       And  Sehir aratir
-      And  Sehire gore uni aratir
-      Then Uniye gore bolum aratir
-      And  Dogru siralandigini dogrular
       And  Departments sayfasina yonlendirdigini dogrular
       And  Sayfayi kapatir
 

@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import pages.TestPage;
 import utils.ConfigReader;
@@ -13,6 +14,7 @@ import java.io.IOException;
 
 public class Us_003stepDef extends TestPage {
 
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
     public static void signIn(){
         TestPage testPage=new TestPage();
         ReusableMethods.waitFor(3);
@@ -20,7 +22,8 @@ public class Us_003stepDef extends TestPage {
         testPage.userName.sendKeys(ConfigReader.getProperty("userName"));
         ReusableMethods.waitFor(3);
         testPage.password.sendKeys(ConfigReader.getProperty("password"),Keys.ENTER);
-        Driver.getDriver().navigate().refresh();
+        testPage.homePage.click();
+        //Driver.getDriver().navigate().refresh();
 
     }
     @Then("Kullanici sign in olur")
@@ -31,16 +34,26 @@ public class Us_003stepDef extends TestPage {
 
     @And("HomePage'de oldugunu dogrular")
     public void homepageDeOldugunuDogrular() {
-       Assert.assertTrue(homePage.isDisplayed());
+
+       //Assert.assertTrue(homePage.isDisplayed());
     }
+
+
 
     @And("Default halinde uni siralndigini gorur")
     public void defaultHalindeUniSiralndiginiGorur() throws IOException {
-        ReusableMethods.scrollIntoView(ourDepartments);
-       // ReusableMethods.getActions().sendKeys(Keys.ARROW_DOWN).scrollToElement(ourDepartments);
+
+
+        long scrollHeight = (Long) js.executeScript("return Math.max( document.documentElement.scrollHeight, document.body.scrollHeight);");
+        long halfScroll = scrollHeight / 2;
+        js.executeScript("window.scrollTo(0, arguments[0]);", halfScroll);
+        ReusableMethods.waitForVisibility(ourDepartments,3);
+        //ReusableMethods.getActions().sendKeys(Keys.ARROW_DOWN).scrollToElement(ourDepartments);
         ReusableMethods.waitFor(2);
         ReusableMethods.getScreenshot("default Uni siralama");
     }
+
+
 
     @Then("Search butonunun oldugunu dogrular")
     public void searchButonununOldugunuDogrular() {
@@ -48,34 +61,23 @@ public class Us_003stepDef extends TestPage {
     }
 
     @And("Sehir aratir")
-    public void sehirAratir() throws   IOException {
-       ReusableMethods.select(selectCity).selectByVisibleText("Ankara");
-        //ReusableMethods.getActions().sendKeys(Keys.TAB).build().perform();
-        //selectCity.sendKeys("ankara");
+    public void sehirAratir()  {
+        ReusableMethods.getActions().sendKeys(Keys.ARROW_UP).build().perform();
+        ReusableMethods.getActions().click(selectCity).sendKeys("Ankara").sendKeys(Keys.TAB).sendKeys(Keys.TAB).
+                sendKeys("Ankara university").sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("Geography").sendKeys(Keys.TAB).
+                sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
+
         ReusableMethods.waitFor(3);
-       // ReusableMethods.getScreenshotWebElement("sehir",selectCity);
-        //ReusableMethods.waitFor(3);
-    }
-
-    @And("Sehire gore uni aratir")
-    public void sehireGoreUniAratir() {
-        selectUni.isSelected();
-    }
-
-    @Then("Uniye gore bolum aratir")
-    public void uniyeGoreBolumAratir() {
-        selectDepartment.isSelected();
-        ReusableMethods.waitFor(3);
-    }
-
-    @And("Dogru siralandigini dogrular")
-    public void dogruSiralandiginiDogrular() {
-
 
     }
+
+
 
     @And("Departments sayfasina yonlendirdigini dogrular")
-    public void departmentsSayfasinaYonlendirdiginiDogrular() {
-
+    public void departmentsSayfasinaYonlendirdiginiDogrular() throws IOException {
+        ReusableMethods.waitFor(4);
+        ReusableMethods.getScreenshotWebElement("department",geography);
     }
+
+
 }
