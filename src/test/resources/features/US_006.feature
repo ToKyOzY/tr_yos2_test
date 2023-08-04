@@ -1,7 +1,6 @@
 @US006
 Feature: US_006
 
-  Background:
   Scenario: TC_001 Universitelerin alfabetik olarak sırralandığı doğrulanır
 
       Given Kullanici "tr_yos" sayfasina gider

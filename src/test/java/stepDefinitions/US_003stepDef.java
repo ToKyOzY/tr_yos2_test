@@ -12,7 +12,7 @@ import utils.ReusableMethods;
 
 import java.io.IOException;
 
-public class Us_003stepDef extends TestPage {
+public class US_003stepDef extends TestPage {
 
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
     public static void signIn(){
@@ -28,7 +28,7 @@ public class Us_003stepDef extends TestPage {
     }
     @Then("Kullanici sign in olur")
     public void kullaniciSignInOlur() {
-        Us_003stepDef.signIn();
+        US_003stepDef.signIn();
         ReusableMethods.waitFor(5);
     }
 
