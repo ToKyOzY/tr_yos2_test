@@ -9,6 +9,6 @@ public class Tr_yosBaseURL {
 
     @Before
     public void trYosSetUp() {
-        spec = new RequestSpecBuilder().setBaseUri("https://tr-yos-2-git-tr-yos-team2-kubracvs.vercel.app/").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://tr-yös.com/api/v1/education/university.php?id=1687189250711&token= ").build();
     }
 }

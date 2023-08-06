@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UiSteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -21,7 +21,7 @@ public class SmokeStepDef extends TestPage{
    // TestPage testPage=new TestPage();
 
 
-    JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+       JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
 
     @Given("Kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String URL) {
@@ -51,6 +51,7 @@ public class SmokeStepDef extends TestPage{
     @Then("Gecerli email girer")
     public void gecerliEmailGirer() {
         userName.sendKeys(ConfigReader.getProperty("userName"));
+        ReusableMethods.waitFor(2);
     }
 
     @And("Gecerli password girer")
@@ -60,7 +61,7 @@ public class SmokeStepDef extends TestPage{
 
     @And("Login butonuna tiklar")
     public void loginButonunaTiklar() {
-    Driver.getDriver().navigate().refresh();
+       //Driver.getDriver().navigate().refresh();
     }
 
     @And("Homepage sayfasinda oldugunu dugrular")
@@ -104,7 +105,7 @@ public class SmokeStepDef extends TestPage{
     @Then("Don't have an account yet? Sign Up kisminin oldugu ve signup butonunun tiklanabilir oldugunu dogrular")
     public void donTHaveAnAccountYetSignUpKismininOlduguVeSignupButonununTiklanabilirOldugunuDogrular() throws IOException {
         ReusableMethods.waitForVisibility(signUpYet,5);
-    ReusableMethods.getScreenshot("sign up");
+        ReusableMethods.getScreenshot("sign up");
     }
 
     @And("Sign up butonuna tiklaninca dogru yonlendirdigini dogrular")
