@@ -1,6 +1,6 @@
 
 @US003
-Feature: US_003
+Feature: US_003 Home
 
 
   Scenario: TC_001 HomePage'de karışık üniversite sıralaması görülmeli.
@@ -16,7 +16,7 @@ Feature: US_003
     Given Kullanici "tr_yos" sayfasina gider
       When Kullanici sign in olur
       Then Search butonunun oldugunu dogrular
-      And  Sehir aratir
+      And  Sehir, uni ve departmen aratir
       And  Departments sayfasina yonlendirdigini dogrular
       And  Sayfayi kapatir
 

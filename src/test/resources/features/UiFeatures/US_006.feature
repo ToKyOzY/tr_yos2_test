@@ -1,5 +1,5 @@
 @US006
-Feature: US_006
+Feature: US_006 Universities
 
   Scenario: TC_001 Universitelerin alfabetik olarak sırralandığı doğrulanır
 

@@ -60,15 +60,14 @@ public class US_003stepDef extends TestPage {
     Assert.assertTrue(search.isDisplayed());
     }
 
-    @And("Sehir aratir")
-    public void sehirAratir()  {
+    @And("Sehir, uni ve departmen aratir")
+    public void sehirUniVeDepartmenAratir() {
         ReusableMethods.getActions().sendKeys(Keys.ARROW_UP).build().perform();
         ReusableMethods.getActions().click(selectCity).sendKeys("Ankara").sendKeys(Keys.TAB).sendKeys(Keys.TAB).
                 sendKeys("Ankara university").sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("Geography").sendKeys(Keys.TAB).
                 sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 
         ReusableMethods.waitFor(3);
-
     }
 
 
@@ -78,6 +77,7 @@ public class US_003stepDef extends TestPage {
         ReusableMethods.waitFor(4);
         ReusableMethods.getScreenshotWebElement("department",geography);
     }
+
 
 
 }

@@ -72,15 +72,28 @@ public class TestPage  {
     @FindBy (xpath = "(//*[text()='Departments'])[1]")
     public WebElement departments;
 
+    @FindBy (xpath = "(//*[@class='toast-header bg-success text-white'])[2]")
+    public WebElement compareAddedSuccess;
+
+    @FindBy (xpath = "(//*[@class='toast-header bg-success text-white'])[2]")
+    public WebElement favoriAddedSuccess;
     @FindBy (xpath = "(//*[text()='Compare'])[1]")
     public WebElement compare;
+
+    @FindBy (xpath = "//*[@id='account-dropdown']")
+    public WebElement myAccount;
 
     @FindBy (xpath = "//*[@class='tit btn  my-2 py-2 m-1 flex-wrap ']")
     public WebElement compareDepartment;
 
+    @FindBy (xpath ="//*[@class='tit btn  my-1 py-2 m-1 flex-wrap ']")
+    public  WebElement favoriDepartment;
+
     @FindBy (xpath = "(//*[@class='heart fa-solid fa-heart-circle-check'])[1]")
     public WebElement favori;
 
+    @FindBy (xpath = "//*[@id='language-dropdown']")
+    public WebElement language1;
 
 
 }

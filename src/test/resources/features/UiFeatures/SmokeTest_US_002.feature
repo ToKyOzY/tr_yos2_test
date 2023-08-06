@@ -1,6 +1,6 @@
 
 @smoke
-Feature: US_002
+Feature: US_002 Login
 
 
  @aa

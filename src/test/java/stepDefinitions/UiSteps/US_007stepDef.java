@@ -49,18 +49,22 @@ public class US_007stepDef extends TestPage {
         compare.click();
     }
 
-    @And("Karşılaştırma yapildigini doğrulanır")
-    public void karşılaştırmaYapildiginiDoğrulanır() throws IOException {
-        ReusableMethods.waitFor(2);
-        compareDepartment.click();
-        ReusableMethods.waitFor(2);
-        ReusableMethods.getScreenshot("compare department");
+    @And("Compare succesfully mesajinin gorundugunu dogrular")
+    public void compareSuccesfullyMesajininGorundugunuDogrular() {
+        Assert.assertTrue(compareAddedSuccess.isDisplayed());
     }
+
 
     @And("Sayfada sıralanan ünilerde favari butonuna tıklanır ve favori lambasının yandığı doğrulanır")
     public void sayfadaSıralananÜnilerdeFavariButonunaTıklanırVeFavoriLambasınınYandığıDoğrulanır() {
         favori.click();
         Assert.assertTrue(favori.isDisplayed());
+    }
+
+
+    @And("Successfully mesajının gorundugu dorulanir")
+    public void successfullyMesajınınGorunduguDorulanir() {
+        Assert.assertTrue(favoriAddedSuccess.isDisplayed());
     }
 
 
