@@ -2,7 +2,6 @@
 @US003
 Feature: US_003 Home
 
-
   Scenario: TC_001 HomePage'de karışık üniversite sıralaması görülmeli.
 
       When Kullanici "tr_yos" sayfasina gider

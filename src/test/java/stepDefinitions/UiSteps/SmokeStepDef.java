@@ -14,7 +14,9 @@ import utils.Driver;
 import utils.ReusableMethods;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class SmokeStepDef extends TestPage{
 
@@ -73,7 +75,8 @@ public class SmokeStepDef extends TestPage{
 
     @And("Sayfayi kapatir")
     public void sayfayiKapatir() {
-        Driver.getDriver().quit();
+        Driver.getDriver().close();
+        //Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofDays(10));
     }
 
     @Then("Save password butonunun gorunur ve tiklanabilir oldugunu dogrular")
