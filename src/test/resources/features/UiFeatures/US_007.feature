@@ -29,7 +29,9 @@ Feature: US_007 Departments, Compare and Favori
    And   3 tane şehir, uni ve departman seçer
    And   Seçilen uniler için compare butonuna tıklar
    And   Compare succesfully mesajinin gorundugunu dogrular
-    And Sayfayi kapatir
+   And  Compare eklenenler favori departments sayfasında gorulur ve silinebildigi dogrulanir
+
+  And Sayfayi kapatir
 
 @US0072
   Scenario: TC_004 Favori butonu olmalı tıklanabilmeli
@@ -39,6 +41,7 @@ Feature: US_007 Departments, Compare and Favori
     And  Departments butonuna tıklar
     And  Sayfada sıralanan ünilerde favari butonuna tıklanır ve favori lambasının yandığı doğrulanır
     And  Successfully mesajının gorundugu dorulanir
+    And Favoriye eklenenler favori departments sayfasında gorulur ve silinebildigi dogrulanir
     And Sayfayi kapatir
 
 
