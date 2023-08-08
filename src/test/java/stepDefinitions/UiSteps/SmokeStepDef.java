@@ -75,8 +75,9 @@ public class SmokeStepDef extends TestPage{
 
     @And("Sayfayi kapatir")
     public void sayfayiKapatir() {
-        Driver.getDriver().close();
-        //Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofDays(10));
+
+        Driver.getDriver().quit();
+
     }
 
     @Then("Save password butonunun gorunur ve tiklanabilir oldugunu dogrular")
@@ -119,4 +120,6 @@ public class SmokeStepDef extends TestPage{
         ReusableMethods.getScreenshot("signUp");
 
     }
+
+
 }

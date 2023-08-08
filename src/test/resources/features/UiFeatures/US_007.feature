@@ -20,21 +20,19 @@ Feature: US_007 Departments, Compare and Favori
     And  seçilenlerin sıralandığı doğrulanır
     And Sayfayi kapatir
 
-@US0072
-  Scenario: TC_003 Seçilen üniler compare(karşılaştırma) yapılabilmeli
+@US0073
+  Scenario: TC_003 Seçilen üniler compare(karşılaştırma) yapılabilmeli ve silinebilmeli
 
     Given Kullanici "tr_yos" sayfasina gider
     When  Kullanici sign in olur
    And   Departments butonuna tıklar
-   And   3 tane şehir, uni ve departman seçer
-   And   Seçilen uniler için compare butonuna tıklar
+   And   Unileri karsilastirmak için compare butonuna tıklar
    And   Compare succesfully mesajinin gorundugunu dogrular
    And  Compare eklenenler favori departments sayfasında gorulur ve silinebildigi dogrulanir
-
   And Sayfayi kapatir
 
-@US0072
-  Scenario: TC_004 Favori butonu olmalı tıklanabilmeli
+@US0074
+  Scenario: TC_004 Favori butonu olmalı tıklanabilmeli ve seçilen favoriler silinebilmeli
 
     Given Kullanici "tr_yos" sayfasina gider
     When  Kullanici sign in olur

@@ -1,7 +1,7 @@
 
-@US003
-Feature: US_003 Home
 
+Feature: US_003 Home
+  @US003
   Scenario: TC_001 HomePage'de karışık üniversite sıralaması görülmeli.
 
       When Kullanici "tr_yos" sayfasina gider
@@ -9,7 +9,7 @@ Feature: US_003 Home
       And  HomePage'de oldugunu dogrular
       And  Default halinde uni siralndigini gorur
       And  Sayfayi kapatir
-@cc
+  @US0031
   Scenario: TC_002 Şehir seçilebilmeli, şehire göre üniversite ve bölüm aratılabilmeli.
 
     Given Kullanici "tr_yos" sayfasina gider

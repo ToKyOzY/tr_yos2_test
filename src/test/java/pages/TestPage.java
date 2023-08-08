@@ -75,12 +75,15 @@ public class TestPage  {
     @FindBy (xpath = "(//*[@class='toast-header bg-success text-white'])[2]")
     public WebElement compareAddedSuccess;
 
-    @FindBy (xpath = "(//*[@class='toast-header bg-success text-white'])[2]")
+    @FindBy (xpath = "(//*[text()='Favorite added successfully.'])[1]")
     public WebElement favoriAddedSuccess;
+
     @FindBy (xpath = "(//*[text()='Compare'])[1]")
     public WebElement compare;
+    @FindBy (xpath = "(//*[text()='Compare'])[2]")
+    public WebElement compare2;
 
-    @FindBy (xpath = "//*[@id='account-dropdown']")
+    @FindBy (xpath = "//*[@class='dropdown-toggle btn btn-primary']")
     public WebElement myAccount;
 
     @FindBy (xpath = "//*[@class='tit btn  my-2 py-2 m-1 flex-wrap ']")
@@ -92,8 +95,13 @@ public class TestPage  {
     @FindBy (xpath = "(//*[@class='heart fa-solid fa-heart-circle-check'])[1]")
     public WebElement favori;
 
+    @FindBy (xpath = "//*[@class='comp  h-20 p-1 px-2 rounded-circle border-0 d-flex justify-content-center align-items-center']")
+    public WebElement favoriSil;
     @FindBy (xpath = "//*[@id='language-dropdown']")
     public WebElement language1;
+
+    @FindBy (xpath = "//*[@class='titbtn py-1 text-center']")
+    public WebElement logout;
 
 
 }

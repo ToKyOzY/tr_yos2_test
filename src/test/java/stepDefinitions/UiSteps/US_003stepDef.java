@@ -57,6 +57,7 @@ public class US_003stepDef extends TestPage {
 
     @Then("Search butonunun oldugunu dogrular")
     public void searchButonununOldugunuDogrular() {
+
     Assert.assertTrue(search.isDisplayed());
     }
 
@@ -74,8 +75,8 @@ public class US_003stepDef extends TestPage {
 
     @And("Departments sayfasina yonlendirdigini dogrular")
     public void departmentsSayfasinaYonlendirdiginiDogrular() throws IOException {
-        ReusableMethods.waitFor(4);
-        ReusableMethods.getScreenshotWebElement("department",geography);
+        ReusableMethods.waitFor(5);
+        ReusableMethods.getScreenshot("department");
     }
 
 
